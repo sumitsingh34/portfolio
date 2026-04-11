@@ -20,7 +20,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const PERSONAL_INFO = {
   name: "Sumit Singh",
-  roles: ["Software Engineer", "Full Stack Developer", "Cloud Enthusiast"],
+  roles: ["Software Engineer", "Full Stack Developer", "Cloud Enthusiast", "Data Analyst"],
   tagline:
     "6+ years building scalable web applications, cloud solutions, and intelligent systems for enterprises and startups alike",
   email: "contact@sumitsingh.dev",
@@ -29,9 +29,9 @@ export const PERSONAL_INFO = {
 };
 
 export const ABOUT_TEXT = [
-  "I am a Software Engineer at MinMax Technologies in Dallas, TX, with over 6 years of experience in the IT industry. My expertise spans full-stack development, data engineering, cloud computing, ETL processes, and machine learning.",
-  "Having worked at both large tech companies like TCS and innovative startups, I bring a versatile perspective to every project. I hold a Master's degree in Computer Science from Indiana State University with a 3.9 GPA.",
-  "I'm passionate about building high-performance applications that solve real-world problems, leveraging modern technologies across the full stack — from React and .NET frontends to cloud-native backends on Azure and AWS.",
+  "I am a Software Engineer at MinMax Technologies in Dallas, TX, with over 6 years of experience in the IT industry. My expertise spans full-stack development, data engineering, cloud computing, ETL processes, analytics, and machine learning.",
+  "Having worked at both large tech companies like Tata Consultacny Services (TCS) and innovative startups, I bring a versatile perspective to every project. I hold a Master's degree in Computer Science (Data Science major) from Indiana State University with a 3.9 GPA.",
+  "I'm passionate about building high-performance applications that solve real-world problems, leveraging modern technologies across the full-stack from React and .NET frontends to cloud-native backends on Azure and AWS.",
 ];
 
 export const STATS = [
@@ -47,11 +47,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "code",
     skills: [
       { name: "JavaScript", level: 92 },
-      { name: "TypeScript", level: 88 },
-      { name: "Python", level: 85 },
-      { name: "Java", level: 90 },
-      { name: "C#", level: 88 },
-      { name: "SQL", level: 85 },
+      { name: "TypeScript", level: 85 },
+      { name: "Python", level: 90 },
+      { name: "Java", level: 82 },
+      { name: "C#", level: 92 },
+      { name: "SQL", level: 95 },
     ],
   },
   {
@@ -60,8 +60,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: "React.js", level: 92 },
       { name: "Node.js", level: 88 },
-      { name: "Angular", level: 82 },
-      { name: "ASP.NET", level: 85 },
+      { name: "Angular", level: 79 },
+      { name: "ASP.NET", level: 90 },
       { name: "Spring Boot", level: 80 },
       { name: "Django", level: 80 },
     ],
@@ -72,8 +72,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: "PostgreSQL", level: 88 },
       { name: "MongoDB", level: 85 },
-      { name: "SQL Server", level: 85 },
-      { name: "Oracle PL/SQL", level: 82 },
+      { name: "SQL Server", level: 90 },
+      { name: "Oracle PL/SQL", level: 85 },
       { name: "Redis", level: 78 },
       { name: "Neo4J", level: 70 },
     ],
@@ -95,7 +95,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "data",
     skills: [
       { name: "Machine Learning", level: 80 },
-      { name: "Power BI", level: 85 },
+      { name: "Power BI", level: 90 },
       { name: "Pandas", level: 82 },
       { name: "Tableau", level: 78 },
       { name: "NumPy", level: 80 },
@@ -221,7 +221,7 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: "walmart-rto",
-    title: "RTO Hackathon — Walmart Global Tech",
+    title: "RTO Hackathon - Walmart Global Tech",
     description:
       "Missing pet finder solution built during Walmart's hackathon. Features exploratory data analysis, ML model training with regression, and interactive Streamlit deployment.",
     technologies: ["Python", "Machine Learning", "Streamlit", "Data Analytics"],
@@ -229,7 +229,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "airbnb-clone",
-    title: "Airbnb Clone — MERN Stack",
+    title: "Airbnb Clone - MERN Stack",
     description:
       "Full-featured property listing and booking system with user authentication, search functionality, and responsive design built with the MERN stack.",
     technologies: ["React", "MongoDB", "Node.js", "Express.js"],
@@ -246,7 +246,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "twitter-clone",
-    title: "Twitter Clone — Web Application",
+    title: "Twitter Clone - Web Application",
     description:
       "Social media application with user authentication, post creation, profile management, and real-time feed built with Django and PostgreSQL.",
     technologies: ["Django", "PostgreSQL", "Bootstrap", "HTML"],
@@ -254,7 +254,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "doc-similarity",
-    title: "Data Mining — Document Similarity",
+    title: "Data Mining - Document Similarity",
     description:
       "Deep learning-based pattern identification across 10 topics using PyTorch. Focuses on text classification accuracy through neural network architectures.",
     technologies: ["Python", "PyTorch", "Deep Learning", "Text Analysis"],
@@ -265,7 +265,7 @@ export const PROJECTS: Project[] = [
 export const EDUCATION: Education[] = [
   {
     degree: "Master of Science",
-    field: "Computer Science",
+    field: "Computer Science - Data Science Major",
     institution: "Indiana State University",
     location: "Terre Haute, United States",
     year: "2023",
@@ -285,7 +285,7 @@ export const EDUCATION: Education[] = [
     institution: "West Bengal University of Technology",
     location: "Kolkata, India",
     year: "2018",
-    gpa: "3.71 / 4.0",
+    gpa: "3.7 / 4.0",
     coursework: [
       "Data Structures & Algorithms",
       "Database Management",

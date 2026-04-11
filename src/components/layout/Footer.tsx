@@ -68,7 +68,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} Sumit Singh. Built with Next.js &amp; Tailwind CSS.
+            &copy; {new Date().getFullYear()} &nbsp; Sumit Singh. Built with Next.js &amp; Tailwind CSS.
           </p>
           <button
             onClick={() => scrollToSection("hero")}
