@@ -73,7 +73,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }: MobileMen
                     onClick={() => handleNavClick(item.href)}
                     className={`text-left px-4 py-3 rounded-lg text-[length:var(--font-size-nav)] transition-colors cursor-pointer ${
                       activeSection === item.href
-                        ? "text-heading bg-card"
+                        ? "text-accent-blue bg-card"
                         : "text-muted hover:text-heading hover:bg-card"
                     }`}
                   >
