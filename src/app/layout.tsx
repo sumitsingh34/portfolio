@@ -6,6 +6,7 @@ import ThemeProvider from "@/components/layout/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/effects/ScrollProgress";
+import BackToTop from "@/components/ui/BackToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -72,6 +73,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <BackToTop />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

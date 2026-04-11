@@ -56,7 +56,7 @@ export default function About() {
           variants={staggerContainer}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
+          className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12"
         >
           {STATS.map((stat) => (
             <motion.div key={stat.label} variants={fadeInUp}>
@@ -68,7 +68,7 @@ export default function About() {
                     decimals={stat.decimals}
                   />
                 </div>
-                <p className="text-sm text-muted">{stat.label}</p>
+                <p className="text-muted">{stat.label}</p>
               </GlassCard>
             </motion.div>
           ))}

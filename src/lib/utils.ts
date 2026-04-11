@@ -1,5 +1,11 @@
+import { track } from "@vercel/analytics";
+
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
+}
+
+export function trackResumeDownload() {
+  track("resume_download");
 }
 
 export function scrollToSection(id: string) {

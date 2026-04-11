@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NAV_ITEMS, PERSONAL_INFO } from "@/lib/data";
-import { scrollToSection } from "@/lib/utils";
+import { scrollToSection, trackResumeDownload } from "@/lib/utils";
 import { HiDownload } from "react-icons/hi";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import MobileMenu from "./MobileMenu";
@@ -22,26 +22,20 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-
-    NAV_ITEMS.forEach((item) => {
-      const el = document.getElementById(item.href);
-      if (!el) return;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveSection(item.href);
-          }
-        },
-        { threshold: 0.3, rootMargin: "-80px 0px 0px 0px" }
-      );
-
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
+    const detect = () => {
+      const offset = 120;
+      let current = "hero";
+      for (const item of NAV_ITEMS) {
+        const el = document.getElementById(item.href);
+        if (el && el.getBoundingClientRect().top <= offset) {
+          current = item.href;
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", detect, { passive: true });
+    detect();
+    return () => window.removeEventListener("scroll", detect);
   }, []);
 
   return (
@@ -72,7 +66,7 @@ export default function Navbar() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative px-3 py-2 text-sm transition-colors cursor-pointer ${
+                  className={`relative px-3 py-2 text-[length:var(--font-size-nav)] transition-colors cursor-pointer ${
                     activeSection === item.href
                       ? "text-heading"
                       : "text-muted hover:text-heading"
@@ -96,7 +90,8 @@ export default function Navbar() {
               <a
                 href={PERSONAL_INFO.resumeUrl}
                 download
-                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 transition-opacity"
+                onClick={trackResumeDownload}
+                className="flex items-center gap-2 px-4 py-2 text-[length:var(--font-size-body)] font-medium text-white rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 transition-opacity"
               >
                 <HiDownload className="w-4 h-4" />
                 Resume

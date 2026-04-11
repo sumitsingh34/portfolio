@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_ITEMS, PERSONAL_INFO } from "@/lib/data";
-import { scrollToSection } from "@/lib/utils";
+import { scrollToSection, trackResumeDownload } from "@/lib/utils";
 import { HiDownload, HiX } from "react-icons/hi";
 
 interface MobileMenuProps {
@@ -71,7 +71,7 @@ export default function MobileMenu({ isOpen, onClose, activeSection }: MobileMen
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + i * 0.05 }}
                     onClick={() => handleNavClick(item.href)}
-                    className={`text-left px-4 py-3 rounded-lg text-lg transition-colors cursor-pointer ${
+                    className={`text-left px-4 py-3 rounded-lg text-[length:var(--font-size-nav)] transition-colors cursor-pointer ${
                       activeSection === item.href
                         ? "text-heading bg-card"
                         : "text-muted hover:text-heading hover:bg-card"
@@ -86,7 +86,8 @@ export default function MobileMenu({ isOpen, onClose, activeSection }: MobileMen
               <a
                 href={PERSONAL_INFO.resumeUrl}
                 download
-                className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 transition-opacity"
+                onClick={trackResumeDownload}
+                className="flex items-center justify-center gap-2 px-4 py-3 text-[length:var(--font-size-body)] font-medium text-white rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 transition-opacity"
               >
                 <HiDownload className="w-4 h-4" />
                 Download Resume

@@ -9,7 +9,6 @@ import type {
 } from "@/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "hero" },
   { label: "About", href: "about" },
   { label: "Skills", href: "skills" },
   { label: "Experience", href: "experience" },
@@ -37,8 +36,9 @@ export const ABOUT_TEXT = [
 export const STATS = [
   { label: "Years Experience", value: 6, suffix: "+" },
   { label: "Companies", value: 3, suffix: "" },
-  { label: "Projects", value: 5, suffix: "+" },
+  { label: "Projects", value: 15, suffix: "+" },
   { label: "GPA (Masters)", value: 3.9, suffix: "", decimals: 1 },
+  { label: "Hackathons", value: 4, suffix: "+" },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
@@ -221,11 +221,19 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: "walmart-rto",
-    title: "RTO Hackathon - Walmart Global Tech",
+    title: "Walmart Global Tech - RTO Hackathon",
     description:
       "Missing pet finder solution built during Walmart's hackathon. Features exploratory data analysis, ML model training with regression, and interactive Streamlit deployment.",
     technologies: ["Python", "Machine Learning", "Streamlit", "Data Analytics"],
     githubUrl: "https://github.com/sumitsingh34/Walmart-RTO-Hackathon",
+  },
+  {
+    id: "expense-tracker",
+    title: "Expense Tracker - Android App",
+    description:
+      "Android application for tracking daily expenses with category-based budgeting, visual spending reports, and local data persistence.",
+    technologies: ["Android", "Java", "SQLite", "Material Design"],
+    githubUrl: "https://github.com/sumitsingh34/ExpenseTrackerAndroidApp",
   },
   {
     id: "airbnb-clone",

@@ -16,6 +16,12 @@ const socialIconMap: Record<string, React.ReactNode> = {
   email: <HiMail className="w-5 h-5" />,
 };
 
+const brandColors: Record<string, string> = {
+  github: "text-[var(--color-github)]",
+  linkedin: "text-[#0A66C2]",
+  email: "text-[#EA4335]",
+};
+
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
 
@@ -42,7 +48,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted text-sm sm:text-base font-mono mb-3"
+          className="text-muted font-mono mb-3"
         >
           Hi, I&apos;m
         </motion.p>
@@ -83,7 +89,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-muted text-base sm:text-lg max-w-2xl mx-auto mb-6"
+          className="text-muted max-w-2xl mx-auto mb-6"
         >
           {PERSONAL_INFO.tagline}
         </motion.p>
@@ -126,7 +132,7 @@ export default function Hero() {
               href={link.url}
               target={link.icon === "email" ? undefined : "_blank"}
               rel={link.icon === "email" ? undefined : "noopener noreferrer"}
-              className="p-3 rounded-full border-2 border-accent-blue/30 text-muted hover:text-accent-blue hover:border-accent-blue/60 hover:bg-accent-blue/10 transition-all duration-200"
+              className={`p-3 rounded-full border-2 border-accent-blue/30 ${brandColors[link.icon]} hover:border-accent-blue/60 hover:bg-accent-blue/10 transition-all duration-200`}
               aria-label={link.label}
             >
               {socialIconMap[link.icon]}

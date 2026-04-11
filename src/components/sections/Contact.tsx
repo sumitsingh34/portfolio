@@ -16,6 +16,12 @@ const contactIconMap: Record<string, React.ReactNode> = {
   email: <HiMail className="w-5 h-5" />,
 };
 
+const brandColors: Record<string, string> = {
+  github: "text-[var(--color-github)]",
+  linkedin: "text-[#0A66C2]",
+  email: "text-[#EA4335]",
+};
+
 export default function Contact() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -82,7 +88,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm text-muted mb-1.5">
+                    <label htmlFor="name" className="block text-muted mb-1.5">
                       Name
                     </label>
                     <input
@@ -95,7 +101,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm text-muted mb-1.5">
+                    <label htmlFor="email" className="block text-muted mb-1.5">
                       Email
                     </label>
                     <input
@@ -108,7 +114,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm text-muted mb-1.5">
+                    <label htmlFor="subject" className="block text-muted mb-1.5">
                       Subject
                     </label>
                     <input
@@ -121,7 +127,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm text-muted mb-1.5">
+                    <label htmlFor="message" className="block text-muted mb-1.5">
                       Message
                     </label>
                     <textarea
@@ -135,7 +141,7 @@ export default function Contact() {
                   </div>
 
                   {formState === "error" && (
-                    <p className="text-red-400 text-sm">
+                    <p className="text-red-400">
                       Something went wrong. Please try again or email me directly.
                     </p>
                   )}
@@ -181,7 +187,7 @@ export default function Contact() {
                     <HiMail className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted">Email</p>
+                    <p className="text-muted">Email</p>
                     <a
                       href={`mailto:${PERSONAL_INFO.email}`}
                       className="text-heading hover:text-accent-blue transition-colors"
@@ -198,7 +204,7 @@ export default function Contact() {
                     <HiLocationMarker className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted">Location</p>
+                    <p className="text-muted">Location</p>
                     <p className="text-heading">{PERSONAL_INFO.location}</p>
                   </div>
                 </div>
@@ -215,7 +221,7 @@ export default function Contact() {
                     href={link.url}
                     target={link.icon === "email" ? undefined : "_blank"}
                     rel={link.icon === "email" ? undefined : "noopener noreferrer"}
-                    className="p-3 rounded-lg glass glass-hover text-muted hover:text-heading transition-colors"
+                    className={`p-3 rounded-lg glass glass-hover ${brandColors[link.icon]} hover:text-heading transition-colors`}
                     aria-label={link.label}
                   >
                     {contactIconMap[link.icon]}

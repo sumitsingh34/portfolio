@@ -81,9 +81,9 @@ function CardContent({ experience }: { experience: Experience }) {
   return (
     <>
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs font-mono text-accent-blue">{experience.period}</span>
+        <span className="text-sm font-mono text-accent-blue">{experience.period}</span>
         <span
-          className={`text-xs px-2 py-0.5 rounded-full ${
+          className={`text-sm px-2 py-0.5 rounded-full ${
             experience.type === "work"
               ? "bg-accent-blue/10 text-accent-blue"
               : experience.type === "part-time"
@@ -95,14 +95,14 @@ function CardContent({ experience }: { experience: Experience }) {
         </span>
       </div>
 
-      <h3 className="text-lg font-semibold text-heading">{experience.role}</h3>
-      <p className="text-accent-purple text-sm mb-3">
+      <h3 className="text-xl font-semibold text-heading">{experience.role}</h3>
+      <p className="text-accent-purple mb-3">
         {experience.company} &middot; {experience.location}
       </p>
 
       <ul className="space-y-1.5 mb-4">
         {experience.description.map((desc, i) => (
-          <li key={i} className="text-sm text-muted flex gap-2">
+          <li key={i} className="text-muted flex gap-2">
             <span className="text-accent-blue mt-1 flex-shrink-0">&#8226;</span>
             <span>{desc}</span>
           </li>

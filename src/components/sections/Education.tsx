@@ -37,16 +37,16 @@ export default function Education() {
                     <HiAcademicCap className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-heading">
+                    <h3 className="text-xl font-semibold text-heading">
                       {edu.degree}
                     </h3>
-                    <p className="text-accent-blue text-sm">{edu.field}</p>
-                    <p className="text-muted text-sm mt-1">
+                    <p className="text-accent-blue">{edu.field}</p>
+                    <p className="text-muted mt-1">
                       {edu.institution}
                     </p>
-                    <p className="text-muted text-xs">{edu.location}</p>
+                    <p className="text-muted text-sm">{edu.location}</p>
 
-                    <div className="flex items-center gap-4 mt-3 text-sm">
+                    <div className="flex items-center gap-4 mt-3">
                       <span className="text-muted">
                         <span className="text-heading font-medium">{edu.year}</span>
                       </span>

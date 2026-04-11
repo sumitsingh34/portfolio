@@ -50,7 +50,7 @@ export default function Skills() {
                   <div className="p-2 rounded-lg bg-accent-blue/10 text-accent-blue">
                     {iconMap[category.icon]}
                   </div>
-                  <h3 className="text-lg font-semibold text-heading">
+                  <h3 className="text-xl font-semibold text-heading">
                     {category.title}
                   </h3>
                 </div>

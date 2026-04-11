@@ -26,12 +26,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       <div className="p-5 sm:p-6">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-heading mb-2 group-hover:text-accent-blue transition-colors">
+        <h3 className="text-xl font-semibold text-heading mb-2 group-hover:text-accent-blue transition-colors">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-muted mb-4 line-clamp-3">
+        <p className="text-muted mb-4 line-clamp-3">
           {project.description}
         </p>
 
@@ -53,7 +53,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-muted hover:text-heading transition-colors duration-200"
+            className="flex items-center gap-1.5 text-muted hover:text-heading transition-colors duration-200"
           >
             <FaGithub className="w-4 h-4" />
             Code
@@ -63,7 +63,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-muted hover:text-accent-blue transition-colors"
+              className="flex items-center gap-1.5 text-muted hover:text-accent-blue transition-colors"
             >
               <FaExternalLinkAlt className="w-3.5 h-3.5" />
               Live Demo

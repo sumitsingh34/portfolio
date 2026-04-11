@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, trackResumeDownload } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "outline" | "ghost";
@@ -28,9 +28,9 @@ export default function Button({
   };
 
   const sizes = {
-    sm: "px-3 py-1.5 text-sm",
-    md: "px-5 py-2.5 text-sm",
-    lg: "px-6 py-3 text-base",
+    sm: "px-3 py-1.5 text-base",
+    md: "px-5 py-2.5 text-[length:var(--font-size-body)]",
+    lg: "px-6 py-3 text-[length:var(--font-size-body)]",
   };
 
   const classes = cn(base, variants[variant], sizes[size], className);
@@ -43,6 +43,7 @@ export default function Button({
         className={classes}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        onClick={download ? trackResumeDownload : undefined}
       >
         {children}
       </a>

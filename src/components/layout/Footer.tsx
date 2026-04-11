@@ -11,6 +11,12 @@ const iconMap: Record<string, React.ReactNode> = {
   email: <HiMail className="w-5 h-5" />,
 };
 
+const brandColors: Record<string, string> = {
+  github: "text-[var(--color-github)]",
+  linkedin: "text-[#0A66C2]",
+  email: "text-[#EA4335]",
+};
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-darker">
@@ -19,14 +25,14 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <span className="text-xl font-bold gradient-text">Sumit Singh</span>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-muted">
               Software Engineer crafting scalable web applications and cloud-native solutions.
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h3 className="text-sm font-semibold text-heading uppercase tracking-wider mb-3">
+            <h3 className="font-semibold text-heading uppercase tracking-wider mb-3">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -34,7 +40,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <button
                     onClick={() => scrollToSection(item.href)}
-                    className="text-sm text-muted hover:text-heading transition-colors cursor-pointer"
+                    className="text-muted hover:text-heading transition-colors cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -45,7 +51,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-sm font-semibold text-heading uppercase tracking-wider mb-3">
+            <h3 className="font-semibold text-heading uppercase tracking-wider mb-3">
               Connect
             </h3>
             <div className="flex gap-3">
@@ -55,7 +61,7 @@ export default function Footer() {
                   href={link.url}
                   target={link.icon === "email" ? undefined : "_blank"}
                   rel={link.icon === "email" ? undefined : "noopener noreferrer"}
-                  className="p-2 rounded-lg glass glass-hover text-muted hover:text-heading transition-colors"
+                  className={`p-2 rounded-lg glass glass-hover ${brandColors[link.icon]} hover:text-heading transition-colors`}
                   aria-label={link.label}
                 >
                   {iconMap[link.icon]}
@@ -67,7 +73,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted">
+          <p className="text-muted">
             &copy; {new Date().getFullYear()} &nbsp; Sumit Singh. Built with Next.js &amp; Tailwind CSS.
           </p>
           <button

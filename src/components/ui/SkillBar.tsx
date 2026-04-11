@@ -14,7 +14,7 @@ export default function SkillBar({ name, level, delay = 0 }: SkillBarProps) {
 
   return (
     <div ref={ref} className="space-y-1">
-      <div className="flex justify-between text-sm">
+      <div className="flex justify-between text-base">
         <span className="text-text">{name}</span>
         <span className="text-muted">{level}%</span>
       </div>

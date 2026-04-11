@@ -12,7 +12,7 @@ export default function Certifications() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section className="py-16 md:py-24 bg-darker/50">
+    <section id="certifications" className="py-16 md:py-24 bg-darker/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Certifications"
@@ -34,13 +34,13 @@ export default function Certifications() {
                     <HiBadgeCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-heading">
+                    <h3 className="font-semibold text-heading">
                       {cert.title}
                     </h3>
-                    <p className="text-xs text-accent-purple mt-0.5">
+                    <p className="text-sm text-accent-purple mt-0.5">
                       {cert.issuer}
                     </p>
-                    <p className="text-xs text-muted mt-1">
+                    <p className="text-sm text-muted mt-1">
                       {cert.description}
                     </p>
                   </div>
