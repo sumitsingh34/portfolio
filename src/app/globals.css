@@ -8,7 +8,7 @@
   --color-border: var(--c-border);
   --color-border-hover: var(--c-border-hover);
   --color-accent-blue: #3b82f6;
-  --color-accent-purple: #8b5cf6;
+  --color-accent-purple: #6366f1;
   --color-accent-cyan: #06b6d4;
   --color-muted: var(--c-muted);
   --color-text: var(--c-text);
@@ -156,10 +156,11 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.1em;
 }
 
 /* Gradient border utility */
