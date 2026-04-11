@@ -46,7 +46,7 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
       </div>
 
       {/* Right content (desktop) / Main content (mobile) */}
-      <div className={`${isLeft ? "hidden lg:block" : ""} lg:block`}>
+      <div>
         {isLeft ? (
           <>
             {/* Empty on desktop (content is on left), visible on mobile */}
@@ -73,13 +73,6 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
           </motion.div>
         )}
       </div>
-
-      {/* Mobile fallback for left items */}
-      {isLeft && (
-        <div className="lg:hidden col-start-2">
-          {/* Already handled above */}
-        </div>
-      )}
     </div>
   );
 }

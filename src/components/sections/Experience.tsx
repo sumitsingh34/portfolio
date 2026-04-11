@@ -13,7 +13,7 @@ export default function Experience() {
           subtitle="My professional journey and career path"
         />
 
-        <div className="space-y-0">
+        <div className="space-y-6">
           {EXPERIENCES.map((exp, i) => (
             <TimelineItem key={exp.id} experience={exp} index={i} />
           ))}
