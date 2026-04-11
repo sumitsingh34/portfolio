@@ -68,7 +68,7 @@ export default function Navbar() {
                   onClick={() => scrollToSection(item.href)}
                   className={`relative px-3 py-2 text-[length:var(--font-size-nav)] transition-colors cursor-pointer ${
                     activeSection === item.href
-                      ? "text-heading"
+                      ? "text-accent-blue"
                       : "text-muted hover:text-heading"
                   }`}
                 >
