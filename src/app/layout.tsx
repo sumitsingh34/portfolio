@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sumit Singh — Software Engineer",
+    default: "Sumit Singh - Software Engineer - Full Stack Developer",
     template: "%s | Sumit Singh",
   },
   description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sumit Singh" }],
   openGraph: {
-    title: "Sumit Singh — Software Engineer",
+    title: "Sumit Singh - Software Engineer",
     description:
       "Software Engineer with 6+ years of experience in full-stack development, cloud computing, and data engineering.",
     url: "https://sumitsingh.dev",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sumit Singh — Software Engineer",
+    title: "Sumit Singh - Software Engineer",
     description:
       "Software Engineer with 6+ years of experience in full-stack development, cloud computing, and data engineering.",
   },

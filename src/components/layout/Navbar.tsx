@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { NAV_ITEMS, PERSONAL_INFO } from "@/lib/data";
 import { scrollToSection, trackResumeDownload } from "@/lib/utils";
@@ -12,6 +12,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const skipDetectRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +24,18 @@ export default function Navbar() {
 
   useEffect(() => {
     const detect = () => {
+      if (skipDetectRef.current) return;
       const offset = 120;
       let current = "hero";
+
+      const nearBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 80;
+      if (nearBottom) {
+        setActiveSection(NAV_ITEMS[NAV_ITEMS.length - 1].href);
+        return;
+      }
+
       for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.href);
         if (el && el.getBoundingClientRect().top <= offset) {
@@ -37,6 +48,15 @@ export default function Navbar() {
     detect();
     return () => window.removeEventListener("scroll", detect);
   }, []);
+
+  const handleNavClick = (href: string) => {
+    skipDetectRef.current = true;
+    setActiveSection(href);
+    scrollToSection(href);
+    window.setTimeout(() => {
+      skipDetectRef.current = false;
+    }, 800);
+  };
 
   return (
     <>
@@ -54,7 +74,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <button
-              onClick={() => scrollToSection("hero")}
+              onClick={() => handleNavClick("hero")}
               className="text-xl font-bold gradient-text cursor-pointer"
             >
               SS
@@ -65,7 +85,7 @@ export default function Navbar() {
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item.href)}
                   className={`relative px-3 py-2 text-[length:var(--font-size-nav)] transition-colors cursor-pointer ${
                     activeSection === item.href
                       ? "text-accent-blue"
