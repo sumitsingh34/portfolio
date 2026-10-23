@@ -29,7 +29,7 @@ export const PERSONAL_INFO = {
 
 export const ABOUT_TEXT = [
   "I am a Software Engineer at MinMax Technologies in Dallas, TX, with over 6 years of experience in the IT industry. My expertise spans full-stack development, data engineering, cloud computing, ETL processes, analytics, and machine learning.",
-  "Having worked at both large tech companies like Tata Consultacny Services (TCS) and innovative startups, I bring a versatile perspective to every project. I hold a Master's degree in Computer Science (Data Science major) from Indiana State University with a 3.9 GPA.",
+  "Having worked at both large tech companies like Tata Consultancy Services (TCS) and innovative startups, I bring a versatile perspective to every project. I hold a Master's degree in Computer Science (Data Science major) from Indiana State University with a 3.9 GPA.",
   "I'm passionate about building high-performance applications that solve real-world problems, leveraging modern technologies across the full-stack from React and .NET frontends to cloud-native backends on Azure and AWS.",
 ];
 
@@ -125,12 +125,12 @@ export const EXPERIENCES: Experience[] = [
     period: "Dec 2023 — Present",
     type: "work",
     description: [
-      "Optimized eSmart application architecture using C#/.NET/React/JavaScript, achieving a 20% increase in scalability",
-      "Configured Azure/Kubernetes CI/CD pipelines, reducing deployment time from 2 hours to 30 minutes (75% automation)",
-      "Reduced query execution time by 25% and developed Power BI dashboards for data-driven decisions",
-      "Manages utility asset data processing up to 1 million records",
+      "Optimized the eSMART utility asset management platform with C#/.NET, React, and JavaScript, increasing scalability by 20% while processing up to 1M records",
+      "Configured Azure and Kubernetes CI/CD pipelines, cutting deployment time from 2 hours to 30 minutes (75%)",
+      "Reduced SQL query execution time by 25% and built Power BI dashboards for data-driven decisions",
+      "Secured backend services with authentication and role-based access control; maintained quality through xUnit tests and code reviews",
     ],
-    technologies: ["C#", ".NET", "React", "Azure", "Kubernetes", "Power BI"],
+    technologies: ["C#", ".NET", "React", "Azure", "Kubernetes", "Power BI", "xUnit"],
   },
   {
     id: "isu-ga",
@@ -160,9 +160,8 @@ export const EXPERIENCES: Experience[] = [
     period: "May 2023 — Aug 2023",
     type: "work",
     description: [
-      "Developed full-stack applications using Angular, JavaScript, C#, and .NET",
-      "Designed RESTful APIs using ASP.NET Web API for seamless data communication",
-      "Achieved 30% query performance improvement through MS SQL Server optimization",
+      "Built full-stack features with Angular, C#, and .NET, and designed RESTful APIs using ASP.NET Web API",
+      "Improved MS SQL Server query performance by 30% through query optimization",
     ],
     technologies: ["Angular", "C#", ".NET", "ASP.NET", "MS SQL Server", "Azure"],
   },
@@ -184,14 +183,14 @@ export const EXPERIENCES: Experience[] = [
     id: "tcs",
     role: "Systems Developer",
     company: "Tata Consultancy Services",
-    location: "India",
+    location: "Kolkata, India",
     period: "Feb 2019 — Feb 2022",
     type: "work",
     description: [
-      "Built risk analysis and underwriting features using Angular, J2EE, and Spring Boot, decreasing processing time by 15%",
-      "Developed RESTful services with Node.js/Docker, achieving 40% resource reduction and 2x concurrent request capacity",
-      "Authored 70+ Oracle PL/SQL scripts, enhancing data analytics by 30%",
-      "Delivered full-stack solutions across three insurance companies with Selenium testing",
+      "Built underwriting features with Angular, J2EE, and Spring Boot, reducing processing time by 15%",
+      "Developed RESTful services with Node.js and Docker, reducing resource usage by 40% and doubling concurrent request capacity",
+      "Authored 70+ Oracle PL/SQL scripts, improving data analytics by 30%",
+      "Delivered full-stack solutions for three insurance businesses, backed by Selenium test automation",
     ],
     technologies: [
       "Angular",
@@ -200,19 +199,19 @@ export const EXPERIENCES: Experience[] = [
       "Node.js",
       "Docker",
       "Oracle PL/SQL",
+      "Selenium",
     ],
   },
   {
     id: "openweb",
     role: "Web Developer",
     company: "Openweb Solutions",
-    location: "India",
+    location: "Kolkata, India",
     period: "Apr 2018 — Jan 2019",
     type: "work",
     description: [
-      "Built full-stack applications using React.js, Django, Python, PostgreSQL, and Redis caching",
-      "Achieved 50% site speed improvement and 20% increase in user engagement",
-      "Implemented role-based access control and database optimization strategies",
+      "Built full-stack applications with React, Django, Python, PostgreSQL, and Redis, including role-based access control and encryption",
+      "Increased site speed by 50% and user engagement by 20% through caching and database optimization",
     ],
     technologies: ["React.js", "Django", "Python", "PostgreSQL", "Redis"],
   },
