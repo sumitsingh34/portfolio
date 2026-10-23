@@ -211,7 +211,7 @@ export const EXPERIENCES: Experience[] = [
     type: "work",
     description: [
       "Built full-stack applications with React, Django, Python, PostgreSQL, and Redis, including role-based access control and encryption",
-      "Increased site speed by 50% and user engagement by 20% through caching and database optimization",
+      "Increased site speed and user engagement by 20% through caching and database optimization",
     ],
     technologies: ["React.js", "Django", "Python", "PostgreSQL", "Redis"],
   },
